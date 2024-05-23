@@ -1,13 +1,13 @@
 body {
   background-color: #fff;
   padding:50px;
-  font: 14px/1.5 "Trebuchet MS", sans-serif;
-  color:#222;
+  font: 14px/1.5 "Tahoma", sans-serif;
+  color:#303030;
   font-weight:300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#303030;
+  color:#222;
   margin:0 0 20px;
 }
 
@@ -156,7 +156,7 @@ header ul a:active {
 }
 
 strong {
-  color:#000000;
+  color:#303030;
   font-weight:600;
 }
 
@@ -229,6 +229,24 @@ footer {
     right:50px;
     top:52px;
   }
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
 }
 
 @media print, screen and (max-width: 720px) {
