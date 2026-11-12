@@ -1,0 +1,161 @@
+/* Quiet typography and logo cards, inspired by the supplied reference. */
+@font-face { font-family: Satoshi; src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KUT/7QYRJOI3JIMYHGY6CH7SOIFRQLZOLNJ6/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Satoshi; src: url('https://cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: Satoshi; src: url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+:root { --ink:#27343b; --muted:#56656e; --link:#386b84; --line:#dce4e9; }
+html { min-height:100%; }
+body {
+  margin:0; padding:58px 40px; color:var(--ink);
+  font:500 15.5px/1.7 Satoshi, "PingFang SC", -apple-system, Arial, sans-serif;
+  background:linear-gradient(180deg,#e3edf3 0,#f4f7fa 470px,#fafbfc 900px) no-repeat #fafbfc;
+  -webkit-font-smoothing:auto;
+}
+.wrapper { width:940px; }
+header,footer { width:250px; }
+section { width:620px; }
+a { color:var(--link); text-underline-offset:3px; }
+a:hover { color:#205372; text-decoration:underline; }
+a:focus-visible { outline:2px solid var(--link); outline-offset:4px; }
+strong { font-weight:700; color:#26343e; }
+header { padding-top:5px; }
+header h1 { font-family:Satoshi,"PingFang SC",sans-serif; font-size:24px; font-weight:700; text-align:center; margin-bottom:26px; letter-spacing:-.025em; }
+header h1 [lang] { font-size:21px; font-weight:600; }
+.name-divider { color:#8e9ca7; font-size:19px; font-weight:400; margin:0 2px; }
+header img { max-width:190px; box-shadow:0 0 0 5px #ffffff80,0 3px 14px #354d5e12; }
+.profile-links { margin-top:22px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px; }
+.profile-links a { display:grid; place-items:center; width:40px; height:40px; border-radius:8px; }
+.profile-links a:hover,.profile-links a:focus-visible { background:#ffffff95; }
+.profile-icon {
+  width:18px;
+  height:18px;
+  background:currentColor;
+  mask:var(--icon) center / contain no-repeat;
+}
+.profile-icon-github { --icon:url('../assets/svg/github.svg'); }
+.profile-icon-scholar { --icon:url('../assets/svg/google-scholar.svg'); }
+.profile-icon-x { --icon:url('../assets/svg/x.svg'); }
+.profile-icon-mail { --icon:url('../assets/svg/mail.svg'); }
+.section-nav { display:grid; gap:4px; width:170px; margin:26px auto 0; padding-top:20px; border-top:1px solid #cfdce3; }
+.section-nav a { padding:6px 14px; text-align:center; color:#425661; border-radius:8px; font-weight:500; }
+.section-nav a:hover,.section-nav a:focus-visible { background:#ffffff95; text-decoration:none; }
+section h2 { font-size:22px; line-height:1.35; font-weight:700; color:#22343e; margin:0 0 20px; padding:0; border:0; letter-spacing:-.025em; scroll-margin-top:30px; }
+section h2:not(:first-child) { margin-top:38px; }
+section p { margin:0 0 18px; }
+.education-list,.experience-list { padding:0; list-style:none; }
+.education-list li,.experience-list li,.publication-card {
+  position:relative; margin:0 0 13px;
+  border:1px solid #dce4e9; border-radius:13px;
+  background:linear-gradient(105deg,#ffffffeb,#f2f5f8d9);
+  box-shadow:0 2px 4px #233b4c03;
+}
+.education-list li,.experience-list li { padding:19px 144px 19px 21px; }
+.education-list li:last-child,.experience-list li:last-child { margin-bottom:0; }
+.institution-info { position:relative; min-width:0; z-index:1; }
+.entry-heading { display:block; margin-bottom:5px; }
+.entry-heading strong { font-size:16px; line-height:1.4; display:block; }
+.entry-heading .location { display:block; margin:3px 0 8px; color:var(--muted); font-size:13px; }
+.entry-row { margin:5px 0 0; }
+.entry-row>span { display:block; }
+.date { display:block; font-size:13px; font-weight:500; line-height:1.6; color:#596974; margin-top:3px; font-variant-numeric:tabular-nums; }
+.entry-row+.entry-row { margin-top:10px; }
+.institution .institution-logo { position:absolute; right:20px; top:50%; transform:translateY(-50%); width:100px; height:100px; display:flex; align-items:center; justify-content:center; opacity:.82; }
+.institution-logo img { display:block; width:94px; height:94px; object-fit:contain; }
+.institution.tencent .institution-logo,.institution.royalflush .institution-logo,.institution.alibaba .institution-logo { width:112px; right:16px; }
+.institution.tencent .institution-logo img,.institution.royalflush .institution-logo img,.institution.alibaba .institution-logo img { width:112px; height:85px; }
+.institution.hust .institution-logo { opacity:1; }
+section p.role { margin:0 0 5px; color:#364751; font-size:14.5px; }
+section p.detail { font-size:13.5px; line-height:1.7; color:#50616d; margin:0 0 6px; }
+.qingyun { display:inline-block; padding:0 6px; margin-left:3px; border:1px solid #d0dee6; border-radius:5px; color:#416a80; background:#f0f6fa; font-family:"PingFang SC",sans-serif; font-size:11px; line-height:1.7; vertical-align:1px; white-space:nowrap; }
+.publication-card {
+  padding:18px 21px;
+  scroll-margin-top:28px;
+}
+.publication-title {
+  margin:0 0 6px;
+  color:#26343e;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.45;
+}
+.publication-card .publication-authors {
+  margin:0;
+  color:#52606a;
+  font-size:14px;
+  line-height:1.65;
+}
+.publication-card .publication-summary {
+  margin:10px 0 0;
+  color:#344753;
+  font-size:14.5px;
+  line-height:1.65;
+}
+.publication-authors u { color:#283e4a; text-decoration-color:#9eb0bd; text-underline-offset:3px; }
+.publication-meta {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  margin-top:12px;
+  font-size:13px;
+}
+.publication-venue { color:#516773; font-weight:700; }
+.publication-links { display:flex; flex-wrap:wrap; gap:6px; }
+.publication-links a {
+  display:inline-flex;
+  align-items:center;
+  min-height:26px;
+  padding:0 8px;
+  border:1px solid #d6e2e9;
+  border-radius:6px;
+  background:#f9fbfc;
+  font-weight:700;
+}
+.publication-links a:hover { background:#eaf2f7; }
+.publication-list { margin:0; padding:0; list-style:none; }
+.publication-list > li + li {
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+}
+.publication-list .publication-title { font-size:15px; }
+.publication-list .publication-meta { margin-top:8px; }
+footer { bottom:22px; color:#7d8d98; }
+footer p { text-align:center; margin:0; line-height:1.6; }
+footer small { font-size:10.5px; }
+@media screen and (min-width:1041px) and (max-height:720px) { footer { position:static; clear:left; padding-top:28px; } }
+@media screen and (max-width:1040px) {
+  body { padding:38px; }
+  div.wrapper { width:auto; max-width:680px; margin:auto; }
+  header,section,footer { width:auto; float:none; position:static; }
+  header { padding:0; text-align:center; }
+  header img { max-width:170px; }
+  .profile-links { margin-top:23px; }
+  .section-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:3px 12px; width:auto; padding:13px 0; margin:25px 0 32px; border-bottom:1px solid #d7e1e8; }
+  section { border:0; padding:0; margin-bottom:32px; }
+  footer { border-top:1px solid var(--line); padding-top:18px; }
+}
+@media screen and (max-width:540px) {
+  body { padding:30px 20px; font-size:15.5px; }
+  header h1 { font-size:24px; }
+  .section-nav { gap:0; font-size:14px; }
+  .section-nav a { padding:6px 9px; }
+  .education-list li,.experience-list li { padding:17px 85px 17px 17px; border-radius:11px; }
+  .publication-card { padding:15px 17px; border-radius:11px; }
+  .entry-heading strong { font-size:15px; }
+  .institution .institution-logo { width:56px; height:64px; right:14px; top:23px; transform:none; }
+  .institution-logo img { width:56px; height:56px; }
+  .institution.tencent .institution-logo,.institution.royalflush .institution-logo,.institution.alibaba .institution-logo { width:58px; right:12px; height:40px; }
+  .institution.tencent .institution-logo img,.institution.royalflush .institution-logo img,.institution.alibaba .institution-logo img { width:58px; height:40px; }
+  .entry-row { font-size:14px; }
+  section p.role { font-size:14px; }
+  .qingyun { margin-left:0; }
+  section h2 { font-size:21px; }
+}
+@media print {
+  body { padding:0; background:white; }
+  div.wrapper { width:auto; }
+  header,section,footer { position:static; width:auto; float:none; }
+  .section-nav { display:none; }
+  .institution,.publication-card { break-inside:avoid; }
+}
